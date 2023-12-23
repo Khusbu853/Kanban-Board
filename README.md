@@ -1,4 +1,4 @@
-# GOverview
+# Overview
 
 This project is a Kanban board application built using ReactJS and Tailwind CSS. It allows users to interact with ticket data fetched from the API. Users can group and sort tickets based on different criteria, making it a versatile tool for project management.
 
