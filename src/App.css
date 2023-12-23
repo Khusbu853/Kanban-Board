@@ -1,0 +1,133 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --white1: #ffffff;
+  --black1: #000000;
+
+  --textgrey: #808184;
+
+  --grey1: #dfe4e9;
+  --grey2: #f0f1f4;
+  --grey3: #F8F8FA;
+
+}
+.board-details{
+  width: 100%;
+  height: calc(100vh - 68px);
+  background-color: var(--grey2);
+  overflow-x: scroll;
+}
+.board-details-list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    width: 97%;
+    margin: 0 auto;
+    min-height: 92vh;
+    padding: 10px 0;
+}
+
+@media (max-width: 1200px) {
+  .board-details-list{
+    grid-template-columns: repeat(4, 1fr);
+}
+}
+@media (max-width: 1000px) {
+  .board-details-list{
+    grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (max-width: 680px) {
+  .board-details-list{
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+@media (max-width: 500px) {
+  .board-details-list{
+    grid-template-columns: repeat(1, 1fr);
+}
+}
+
+
+/* card */
+.profile-initial{
+  height: 8px;
+  width: 8px;
+  background-color: var(--grey1);
+  border: 1.5px solid var(--white1);
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  left: 70%;
+  top: 70%;
+}
+.profile-initial-true{
+  background-color: rgb(236, 194, 56);
+}
+
+.tag-title{
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--textgrey);
+}
+.tag-title::before{
+  display: inline-block;
+  content: " ";
+  height: 10px;
+  width: 10px;
+  background-color: var(--textgrey);
+  border-radius: 50%;
+  margin-right: .2rem;
+}
+
+
+/* card-row */
+.card-row{
+  display: flex;
+  flex-direction: column;
+}
+.card-row:last-child{
+  margin-right: 2.5rem;
+}
+
+@media (max-width: 500px) and (min-width: 300px){
+  .list-container{
+      width: 320px;
+      margin-left: 1.5rem;
+  }
+  .list-container:last-child{
+      margin-right: 1.5rem;
+  }
+}
+
+/* header */
+
+.display-dropdown{
+  display: none;
+  width: fit-content;
+  position: absolute;
+  z-index: 2;
+  margin-top: .6rem;
+  padding: .8rem 1rem;
+  background-color: var(--grey3);
+  border: 1px solid var(--grey1);
+  border-radius: .5rem;
+}
+.display-dropdown-show{
+  display: block;
+}
+.display-filters{
+  width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.display-filters:first-child{
+  margin-bottom: .5rem;
+}
